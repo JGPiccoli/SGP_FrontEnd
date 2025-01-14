@@ -10,7 +10,7 @@ import './style.css';
 const VisualizarProjetos = () => {
   const navigate = useNavigate();
   const [projetos, setProjetos] = useState([]);
-  const [tarefas, setTarefas] = useState({}); // Estado para armazenar tarefas de cada projeto
+  const [tarefas, setTarefas] = useState({});
 
   const fetchProjetos = async () => {
     try {
@@ -30,10 +30,9 @@ const VisualizarProjetos = () => {
   };
 
   const handleBack = () => {
-    navigate("/"); // Volta para a página anterior
+    navigate("/");
   };
 
-  // Função para adicionar uma nova tarefa ao projeto específico
   const handleAddTarefa = (projectId) => {
     const novaTarefa = tarefas[projectId]?.novaTarefa.trim();
     if (novaTarefa) {
@@ -42,13 +41,12 @@ const VisualizarProjetos = () => {
         [projectId]: {
           ...prevTarefas[projectId],
           tarefas: [...(prevTarefas[projectId]?.tarefas || []), novaTarefa],
-          novaTarefa: "", // Limpa o campo de entrada após adicionar
+          novaTarefa: "",
         },
       }));
     }
   };
 
-  // Função para lidar com a mudança no campo de tarefa
   const handleChangeTarefa = (e, projectId) => {
     const { value } = e.target;
     setTarefas((prevTarefas) => ({
@@ -60,13 +58,12 @@ const VisualizarProjetos = () => {
     }));
   };
 
-  // Função para excluir o projeto
+
   const handleDelete = async (projectId) => {
     const confirmDelete = window.confirm("Você tem certeza que deseja excluir este projeto?");
     if (confirmDelete) {
       try {
         await axios.delete(`https://localhost:7272/api/Projeto/${projectId}`);
-        // Atualiza a lista de projetos após a exclusão
         setProjetos((prevProjetos) => prevProjetos.filter((projeto) => projeto.project_id !== projectId));
         alert("Projeto excluído com sucesso!");
       } catch (error) {
