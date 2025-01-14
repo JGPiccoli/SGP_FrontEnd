@@ -1,0 +1,118 @@
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project-item {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .project-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .project-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .tarefas-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .tarefas-container h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .tarefas-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+  }
+  
+  .tarefas-container li {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+
+  .button {
+    width: 40%;
+  }
+  
+  .button-action {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #03A688;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-action:hover {
+    background-color: #013d32;
+  }
+
+  .button-tarefa {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #03A688;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-tarefa:hover {
+    background-color: #013d32;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .project-item {
+      width: 90%;
+    }
+  
+    .project-list {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-item {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
