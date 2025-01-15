@@ -33,6 +33,7 @@ export const Button = styled.button`
   background-color: #03a688;
   color: #0d0d0d;
   border: none;
+  font-size: 20px;
   margin-bottom: 3.8rem;
   border-radius: 8px;
   cursor: pointer;
@@ -47,6 +48,6 @@ export const Button = styled.button`
     max-width: 700px;
     margin: 40px 0;
     padding: 22px;
-    font-size: 18px;
+    font-size: 25px;
   }
 `;

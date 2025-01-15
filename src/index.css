@@ -3,6 +3,11 @@
     font-family: 'Source Sans 3', sans-serif !important;
 }
 
+.root{
+ width: 100%;
+}
+
+
 /* Reset CSS */
 *,
 *:after,
